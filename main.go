@@ -10,6 +10,10 @@ func PrintMeSomething() {
 	cli.Print("{red}Some text in red. {white}Some text in white. {default}Some text in default color").InFormat()
 }
 
+func PrintT() {
+	cli.Print("Hello").In("blue")	
+}
+
 func main() {
 	PrintMeSomething()
 	sub.PrintMeSomething()
