@@ -1,0 +1,14 @@
+{
+	"ImportPath": "github.com/maciejmrowiec/go_travis_test",
+	"GoVersion": "go1.4.2",
+	"Deps": [
+		{
+			"ImportPath": "github.com/ivpusic/go-clicolor/clicolor",
+			"Rev": "23f0b77f328a0ff36434970ade8f7c0ec8e8148b"
+		},
+		{
+			"ImportPath": "github.com/shiena/ansicolor",
+			"Rev": "a422bbe96644373c5753384a59d678f7d261ff10"
+		}
+	]
+}
