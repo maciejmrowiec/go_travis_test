@@ -1,13 +1,12 @@
 language: go
+
 go:
 - 1.5
+
 before_install:
 - go get github.com/axw/gocov/gocov
 - go get github.com/mattn/goveralls
 - go get golang.org/x/tools/cmd/cover
-
-before_script:
-  - go vet ./...
 
 script:
 - $HOME/gopath/bin/goveralls -v -service=travis-ci
@@ -18,3 +17,5 @@ deploy:
   api_key:
     secure: k+e7H1Nr5mkHf015+PaRRqhlijS2cn6LJ7kZDoMoOaa5eTtAVVYOFDoiP6l43mY7uze+My6xWWu7ppCDjWGTY+fFPKmCc6LQ0Wv95XAYf6YfjFpEEdfMd1PZkt2MzcohfwX9fNAL4mNpvObVp+hgwU5kK8HGsVyOaudTtGfQ4db4EPkupvWa0hChEd516iYeWd5Pjj4sJ6lqrRmyqqugb2hGNv3i1j1p/H536ImdvqXFRUrXbbXMCeUOqka8fYXJRcbe+CD7jAcOxKTSiRcAOM4VJNzSrMOIACC9PeegeuUhu6vDrQhlr7rQFtyGF3ZKVHyxZnPPaswJ6bDSrPPXgk4H1RnDtiL8WltuuV9srTqebdM/L0AVgTQZQV8kvQp+olAUYmI3EChKsfhuqaC7d+1Pj6CyZotOTkc8Ar1/6Zqls9+pbeV7I4cL+jXELh9s5EUXDezlOd2mFKHKispiA6AFzksUn/r0VxBlzd310nexK/Ysf56L3AwRMf0aBzn47WBdVfcZnodvyu4CpMHm+hZdzLxCfwpVBi7ddIeEm9WkWqkVgjIbQYLn9ky3JBLHOrvz3lHQbCUpKsf0Z1q8EDVd74AscJHbnzM3lvoPXZOaMdMkolCmznUYjKqJbQA3Q174D8xUPSay/xCJU2O9OZsq/cyT6fe1Oo73hjm1YYQ=
   file: ./go_travis_test
+  on:
+    repo: maciejmrowiec/go_travis_test
