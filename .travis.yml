@@ -6,6 +6,9 @@ before_install:
 - go get github.com/mattn/goveralls
 - go get golang.org/x/tools/cmd/cover
 
+before_script:
+  - go vet ./...
+
 script:
 - $HOME/gopath/bin/goveralls -v -service=travis-ci
 - go build
