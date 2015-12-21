@@ -4,8 +4,9 @@ go:
 - 1.5
 
 env:
-- VV1=from_file
-- KEY=${VV2:-VV1}
+ global:
+ - VV1=from_file
+ - KEY=${VV2:-VV1}
 
 before_install:
 - go get github.com/axw/gocov/gocov
