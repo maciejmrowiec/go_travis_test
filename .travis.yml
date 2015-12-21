@@ -3,8 +3,6 @@ language: go
 go:
 - 1.5
 
-cache: bundler
-
 before_install:
 - go get github.com/axw/gocov/gocov
 - go get github.com/mattn/goveralls
