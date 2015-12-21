@@ -5,6 +5,7 @@ go:
 
 env:
 - VV1=from_file
+- KEY=${VV2:-VV1}
 
 before_install:
 - go get github.com/axw/gocov/gocov
@@ -14,7 +15,7 @@ before_install:
 script:
 - go build
 - $HOME/gopath/bin/goveralls -v -service=travis-ci
-- echo $VV1
+- echo $KEY
 
 after_success:
 - mkdir build
