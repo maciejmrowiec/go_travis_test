@@ -14,6 +14,10 @@ func PrintForThePeople() {
 	cli.Print("some text").In("blue")
 }
 
+func PrintForThePeople2() {
+	cli.Print("some text").In("blue")
+}
+
 func main() {
 	PrintMeSomething()
 	sub.PrintMeSomething()
